@@ -33,7 +33,7 @@ public class Network {
 
         for (int i = 0; i < userCount; i++){
 
-            if (users[i].getName().toLowerCase().equals(name.toLowerCase())){
+            if (users[i] != null && users[i].getName().equals(name)){
                 return users[i];
             }
         }
@@ -117,7 +117,7 @@ public class Network {
     public String toString() {
       String ans = "Network:";
         for (int i = 0; i < userCount; i++){
-            ans +="\n" + "-> " + users[i];
+            ans +="\n" + users[i];
         }
        return ans;
     }
